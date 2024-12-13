@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Profile Page</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        /* Basic reset and body styling */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            display: flex;
+            height: 100vh;
+            background-color: #f4f4f9;
+            overflow: hidden;
+        }
+
+        /* Sidebar styling */
+        .sidebar {
+            width: 200px;
+            background-color: #333;
+            color: #fff;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            padding: 20px;
+            position: fixed;
+            height: 100%;
+        }
+
+        .sidebar a {
+            background-color: #444;
+            border: none;
+            color: white;
+            padding: 15px;
+            margin: 10px 0;
+            text-align: left;
+            font-size: 16px;
+            text-decoration: none;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .sidebar a:hover {
+            background-color: #555;
+        }
+
+        /* Main content area */
+        .main-content {
+            margin-left: 220px;
+            width: calc(100% - 220px);
+            padding: 20px;
+            height: 100%;
+            overflow: auto;
+        }
+
+        /* Profile section */
+        .profile-container {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 50px;
+            backdrop-filter: blur(10px); /* Blur effect */
+            -webkit-backdrop-filter: blur(10px); /* Safari fix */
+            border-radius: 15px;
+            padding: 30px;
+            background: rgba(255, 255, 255, 0.4); /* Slight grey with transparency */
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            max-width: 400px;
+            margin: auto;
+        }
+
+        .profile img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 15px;
+        }
+
+        .profile h2 {
+            font-size: 24px;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+
+        .profile p {
+            text-align: center;
+            color: #666;
+            font-size: 16px;
+            margin-bottom: 20px;
+        }
+
+        .profile button {
+            background-color: #4CAF50;
+            border: none;
+            color: white;
+            padding: 10px 20px;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .profile button:hover {
+            background-color: #45a049;
+        }
+
+    </style>
+</head>
+<body>
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <a href="https://www.example.com/1" target="_blank">Button 1</a>
+        <a href="https://www.example.com/2" target="_blank">Button 2</a>
+        <a href="https://www.example.com/3" target="_blank">Button 3</a>
+        <a href="https://www.example.com/4" target="_blank">Button 4</a>
+        <a href="https://www.example.com/5" target="_blank">Button 5</a>
+    </div>
+
+    <!-- Main content -->
+    <div class="main-content">
+        <div class="profile-container">
+            <img src="https://via.placeholder.com/150" alt="Profile Image">
+            <h2>Username</h2>
+            <p>This is a brief description of the user. Here you can provide more information about the person.</p>
+            <button>Follow</button> <!-- New button under description -->
+        </div>
+    </div>
+
+</body>
+</html>
