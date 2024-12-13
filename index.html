@@ -19,7 +19,7 @@
             height: 100vh;
             background-color: #f4f4f9;
             overflow: hidden;
-            justify-content: space-between;
+            justify-content: flex-start;
             padding: 20px;
             position: relative;
             /* Background video */
@@ -45,7 +45,7 @@
             align-items: flex-start;
             gap: 10px;
             width: 200px;
-            margin-left: -400px; /* 3px margin from the edge */
+            margin-right: 20px; /* Ensures space between buttons and profile box */
         }
 
         .buttons-container a {
@@ -68,12 +68,10 @@
 
         /* Main content area */
         .main-content {
-            width: calc(100% - 240px); /* Adjusted for the left buttons */
-            padding: 20px;
-            height: 100%;
             display: flex;
-            justify-content: center;
+            justify-content: flex-start;
             align-items: flex-start;
+            flex-grow: 1; /* Make sure it occupies the remaining space */
         }
 
         /* Profile section */
@@ -90,7 +88,7 @@
             background: rgba(255, 255, 255, 0.4); /* Slight grey with transparency */
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
             max-width: 400px;
-            margin-bottom: 40px;
+            margin-left: 30px; /* This will move the profile to the right */
         }
 
         .profile img {
@@ -127,6 +125,7 @@
 
     <!-- Main content -->
     <div class="main-content">
+        <!-- Profile Box -->
         <div class="profile-container">
             <!-- Profile Image (can be a GIF or static image) -->
             <img src="https://via.placeholder.com/150" alt="Profile Image">
