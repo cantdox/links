@@ -21,9 +21,23 @@
             overflow: hidden;
             justify-content: space-between;
             padding: 20px;
+            position: relative;
+            /* Background video */
+            background: #000; /* Fallback color */
         }
 
-        /* Buttons styling on the right side */
+        /* Full-screen background video */
+        .background-video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -1;
+        }
+
+        /* Buttons styling on the left side */
         .buttons-container {
             display: flex;
             flex-direction: column;
@@ -31,7 +45,7 @@
             align-items: flex-start;
             gap: 10px;
             width: 200px;
-            margin-left: auto;
+            margin-right: 3px; /* 3px margin from the edge */
         }
 
         .buttons-container a {
@@ -121,9 +135,17 @@
 </head>
 <body>
 
+    <!-- Background Video -->
+    <video class="background-video" autoplay loop muted>
+        <source src="your-video.mp4" type="video/mp4">
+        <!-- Fallback for browsers that don't support video -->
+        <img src="fallback-image.jpg" alt="Background Image">
+    </video>
+
     <!-- Main content -->
     <div class="main-content">
         <div class="profile-container">
+            <!-- Profile Image (can be a GIF or static image) -->
             <img src="https://via.placeholder.com/150" alt="Profile Image">
             <h2>Username</h2>
             <p>This is a brief description of the user. Here you can provide more information about the person.</p>
@@ -131,7 +153,7 @@
         </div>
     </div>
 
-    <!-- Buttons on the right side -->
+    <!-- Buttons on the left side -->
     <div class="buttons-container">
         <a href="https://www.example.com/1" target="_blank">Button 1</a>
         <a href="https://www.example.com/2" target="_blank">Button 2</a>
